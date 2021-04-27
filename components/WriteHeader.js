@@ -181,7 +181,7 @@ function WriteHeader() {
           placeholder="Title"
         />
       </div>
-      <textarea
+      <input
         className="font-serif placeholder-thin ml-5 text-2xl focus-within:outline-none placeholder-[#b3b3b1] pl-6 xl:pl-[225px] 2xl:pl-[430px] pt-4"
         placeholder="Tell your story..."
       />
