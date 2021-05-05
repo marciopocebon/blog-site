@@ -9,7 +9,7 @@ function Loading() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="min-h-screen flex justify-center items-center bg-yellow-100">
+      <div className="min-h-screen flex justify-center items-center bg-[#023047]">
         <div className="bg-white p-10 rounded-full flex space-x-3">
           <div className="w-14 h-14 bg-gray-800 rounded-full animate-bounce"></div>
           <div
