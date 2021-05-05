@@ -211,7 +211,7 @@ function Write() {
         />
       </div>
       <textarea
-        className="font-serif placeholder-thin h-full text-2xl  overflow-hidden	placeholder-[#b3b3b1] pt-4 ml-4 pl-6 xl:ml-[225px] 2xl:ml-[380px] focus-within:outline-none"
+        className="font-serif placeholder-thin h-full text-2xl  overflow-hidden	placeholder-[#b3b3b1] pt-4 ml-4 pl-6 xl:ml-[225px] 2xl:ml-[420px] focus-within:outline-none"
         placeholder="Tell your story..."
         value={story}
         onChange={(e) => setStory(e.target.value)}
