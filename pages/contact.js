@@ -36,7 +36,7 @@ export default function ContactUs() {
           href="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620273120/image-removebg-preview_6_obe3fv.png"
         />
       </Head>
-      <div className="md:pt-20 pl-20 w-[400px] pr-5">
+      <div className="md:pt-20 pl-20 w-[420px] pr-5">
         <h2 className="text-4xl font-bold text-gray-100">Help us improve</h2>
         <p className="text-gray-200 pt-5">
           Fill up the form and I will get back to you
@@ -49,7 +49,6 @@ export default function ContactUs() {
           />
           <p className="text-gray-200 text-l">avneeshagarwal0612@gmail.com</p>
         </div>
-
         <div className="hidden md:flex ring-blue-400 hover:ring-2 rounded-lg cursor-pointer focus:outline-none p-3  transform-gpu pr-4 mt-5">
           <img
             src="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620391308/154-1541366_transparent-edit-icon-png-location-white-icon-png-removebg-preview_1_ewvzdm.png"
@@ -58,25 +57,26 @@ export default function ContactUs() {
           />
           <p className="text-gray-200 text-l">India</p>
         </div>
-        <div className="flex md:mt-20">
-          <a href="https:instagram.com/avneesh__agarwal" target="_blank">
+        <a href="https:instagram.com/avneesh__agarwal" target="_blank">
+          <div className="hidden md:flex items-center ring-blue-400 hover:ring-2 rounded-lg cursor-pointer focus:outline-none  transform-gpu pr-4 mt-5">
             <img
-              className="h-14 w-14 hover:bg-blue-900 rounded-full cursor-pointer transform-gpu "
               src="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620289544/md_5af2d4cabfdf2-removebg-preview_mwmvjh.png"
               alt=""
+              className="h-14"
             />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/avneesh-agarwal-78312b20a/"
-            target="_blank"
-          >
+            <p className="text-gray-200 text-l">avneesh__agarwal</p>
+          </div>
+        </a>
+        <a href="https:instagram.com/avneesh__agarwal" target="_blank">
+          <div className="hidden md:flex items-center ring-blue-400 hover:ring-2 rounded-lg cursor-pointer focus:outline-none  transform-gpu pr-4 mt-5">
             <img
-              className="h-14 w-14 hover:bg-blue-900 rounded-full cursor-pointer transform-gpu"
+              className="h-14"
               src="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620292929/1fdbd88fec469fc342cdff7ea25b8bd8-removebg-preview_vctiar.png"
               alt=""
             />
-          </a>
-        </div>
+            <p className="text-gray-200 text-l">Avneesh Agarwal</p>
+          </div>
+        </a>
       </div>
       <form
         onSubmit={sendEmail}
