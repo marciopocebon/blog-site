@@ -28,7 +28,7 @@ export default function ContactUs() {
   }
 
   return (
-    <div className="bg-[#023047] justify-between flex flex-col min-h-screen md:flex-row md:pt-20">
+    <div className="bg-[#023047] justify-between flex flex-col min-h-screen min-w-screen md:flex-row md:pt-20">
       <Head>
         <title>Contact us</title>
         <link
