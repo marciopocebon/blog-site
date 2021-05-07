@@ -28,7 +28,7 @@ export default function ContactUs() {
   }
 
   return (
-    <div className="bg-[#023047] justify-between flex flex-col min-h-screen md:flex-row pt-20">
+    <div className="bg-[#023047] justify-between flex flex-col min-h-screen md:flex-row pt-8">
       <Head>
         <title>Contact us</title>
         <link
@@ -120,7 +120,7 @@ export default function ContactUs() {
           ></textarea>
           <button
             type="submit"
-            className="text-white bg-blue-500 m-2 w-60 h-12 rounded-lg  mt-8 ml-auto"
+            className="text-white bg-blue-500 m-2 w-60 h-12 rounded-lg mt-6 ml-auto"
           >
             Send Message
           </button>
