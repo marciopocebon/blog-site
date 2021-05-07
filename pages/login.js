@@ -11,6 +11,10 @@ function login() {
     <>
       <Head>
         <title>LogIn</title>
+        <link
+          rel="icon"
+          href="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620273120/image-removebg-preview_6_obe3fv.png"
+        />
       </Head>
 
       <div className="bg-[#023047] flex justify-center items-center min-h-[100vh] w-[100vw]">

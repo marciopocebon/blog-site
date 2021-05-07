@@ -27,7 +27,7 @@ function Blog() {
             <p className="text-xl">{d.name}</p>
           </div>
           <p className="text-4xl">{d.title}</p>
-          <p className="text-lg">{d.story}</p>
+          <p className="text-lg">{d.story.slice(0, 350) + "..."}</p>
         </div>
       ))}
     </div>

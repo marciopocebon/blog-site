@@ -6,7 +6,10 @@ function Loading() {
     <>
       <Head>
         <title>Loading ...</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="icon"
+          href="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620273120/image-removebg-preview_6_obe3fv.png"
+        />
       </Head>
 
       <div className="min-h-screen flex justify-center items-center bg-[#023047]">

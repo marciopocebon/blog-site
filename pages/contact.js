@@ -1,8 +1,10 @@
 import emailjs from "emailjs-com";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import React from "react";
 
 export default function ContactUs() {
+  const router = useRouter();
   function sendEmail(e) {
     e.preventDefault();
 
@@ -19,84 +21,147 @@ export default function ContactUs() {
         },
         (error) => {
           console.log(error.text);
-        }
+        },
+        router.push("/")
       );
     e.target.reset();
   }
 
   return (
-    <div className="bg-[#023047] justify-between flex flex-col h-screen sm:flex-row">
+    <div className="bg-[#023047] justify-between flex flex-col min-h-screen md:flex-row md:pt-20">
       <Head>
-        <title>LogIn</title>
+        <title>Contact us</title>
+        <link
+          rel="icon"
+          href="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620273120/image-removebg-preview_6_obe3fv.png"
+        />
       </Head>
-      <div className="pt-20 pl-20 w-96 pr-5">
-        <h2 className="text-4xl font-bold text-gray-100">Help us improve</h2>
+      <div className="pl-1 md:pt-20 md:pl-20 w-[450px] pr-5 md:flex flex-col">
+        <h2 className="mt-10 text-4xl font-bold text-gray-100 md:mt-0">Help us improve</h2>
         <p className="text-gray-200 pt-5">
-          Fill up the form and our team will get back to you
+          Fill up the form and I will get back to you
         </p>
-        <div className="flex ring-blue-400 hover:ring-2 rounded-lg cursor-pointer mt-20 focus:outline-none p-2 hover:bg-blue-900 transform-gpu">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-blue-400 mr-3"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-            />
-          </svg>
-          <p className="text-gray-200 ">avneeshagarwal0612@gmail.com</p>
-        </div>
-        <div className="flex">
+        <div className="hidden ring-blue-700 hover:ring-2 rounded-lg cursor-pointer focus:outline-none p-3 pr-1 transform-gpu mt-20 md:flex">
           <img
-            className="h-14 w-14 hover:bg-blue-900 rounded-full transform-gpu"
-            src="https://res-console.cloudinary.com/dssvrf9oz/thumbnails/v1/image/upload/v1620289544/bWRfNWFmMmQ0Y2FiZmRmMi1yZW1vdmViZy1wcmV2aWV3X213bXZqaA==/preview"
+            src="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620314548/931-9311379_email-icons-white-color-white-email-icon-png-removebg-preview_vzxdln.png"
             alt=""
+            className="h-6 ml-2 mr-2"
           />
+          <p className="text-gray-200 text-l">avneeshagarwal0612@gmail.com</p>
+        </div>
+
+        <div className="hidden ring-blue-700 hover:ring-2 rounded-lg cursor-pointer focus:outline-none p-3 pr-1 transform-gpu mt- md:flex">
+          <img
+            src="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620391308/154-1541366_transparent-edit-icon-png-location-white-icon-png-removebg-preview_1_ewvzdm.png"
+            alt=""
+            className="h-7 ml-2 mr-2"
+          />
+          <p className="text-gray-200 text-l">India</p>
+        </div>
+        <div className="hidden md:flex mt-20">
+          <a href="https:instagram.com/avneesh__agarwal" target="_blank">
+            <img
+              className="h-14 w-14 hover:bg-blue-900 rounded-full cursor-pointer transform-gpu "
+              src="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620289544/md_5af2d4cabfdf2-removebg-preview_mwmvjh.png"
+              alt=""
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/avneesh-agarwal-78312b20a/"
+            target="_blank"
+          >
+            <img
+              className="h-14 w-14 hover:bg-blue-900 rounded-full cursor-pointer transform-gpu"
+              src="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620292929/1fdbd88fec469fc342cdff7ea25b8bd8-removebg-preview_vctiar.png"
+              alt=""
+            />
+          </a>
         </div>
       </div>
       <form
         onSubmit={sendEmail}
-        className="flex flex-col mr-5 bg-white h-4/5 mt-5 rounded-3xl w-2/5"
+        className="flex flex-col mb-8 mt-8 bg-white h-[650px] rounded-3xl ml-10 mr-8 md:w-2/5 md:mr-5 md:mb-0 mt:mt-0"
       >
         <div className="flex flex-col m-5">
+          <h3 className="ml-2 text-blue-700 font-semibold text-md">
+            Your Name
+          </h3>
           <input
             type="text"
-            className="form-control"
-            placeholder="Name"
+            className="ring-2 ring-gray-200 p-2 m-2 rounded-md focus:outline-none focus:ring-blue-500"
             name="name"
           />
+          <h3 className="ml-2 text-blue-700 font-semibold text-md">
+            Your Email
+          </h3>
+
           <input
             type="email"
-            className="form-control"
-            placeholder="Email Address"
+            className="ring-2 ring-gray-200 p-2 m-2 rounded-md focus:outline-none focus:ring-blue-500"
             name="email"
           />
+          <h3 className="ml-2 text-blue-700 font-semibold text-md">
+            Subject of your mail
+          </h3>
+
           <input
             type="text"
-            className="form-control"
-            placeholder="Subject"
+            className="ring-2 ring-gray-200 p-2 m-2 rounded-md focus:outline-none focus:ring-blue-500"
             name="subject"
           />
+          <h3 className="ml-2 text-blue-700 font-semibold text-md">
+            Your message
+          </h3>
           <textarea
-            className="form-control"
-            id=""
+            className="ring-2 ring-gray-200 p-2 m-2 rounded-md focus:outline-none focus:ring-blue-500 h-80 max-h-[250px] min-h-[250px]"
             cols="30"
             rows="8"
-            placeholder="Your message"
             name="message"
           ></textarea>
-          <input
+          <button
             type="submit"
-            className="btn btn-info"
-            value="Send Message"
-          ></input>
+            className="text-white bg-blue-500 md:m-2 w-52 md:w-60 h-12 rounded-lg  mt-8 sm:ml-auto"
+          >
+            Send Message
+          </button>
         </div>
       </form>
+      <div className="flex ring-blue-700 hover:ring-2 p-2 mb-5 rounded-lg cursor-pointer focus:outline-none w-10/12 ml-10 transform-gpu md:hidden">
+        <img
+          src="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620314548/931-9311379_email-icons-white-color-white-email-icon-png-removebg-preview_vzxdln.png"
+          alt=""
+          className="h-6 ml-2 mr-2"
+        />
+        <p className="text-gray-200 text-l">avneeshagarwal0612@gmail.com</p>
+      </div>
+
+      <div className="flex ring-blue-700 hover:ring-2 p-2 rounded-lg cursor-pointer focus:outline-none w-10/12 ml-10 transform-gpu md:hidden">
+        <img
+          src="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620391308/154-1541366_transparent-edit-icon-png-location-white-icon-png-removebg-preview_1_ewvzdm.png"
+          alt=""
+          className="h-7 ml-2 mr-2"
+        />
+        <p className="text-gray-200 text-l">India</p>
+      </div>
+      <div className="flex m-5 ml-10 md:hidden">
+        <a href="https:instagram.com/avneesh__agarwal" target="_blank">
+          <img
+            className="h-14 w-14 hover:bg-blue-900 rounded-full cursor-pointer transform-gpu "
+            src="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620289544/md_5af2d4cabfdf2-removebg-preview_mwmvjh.png"
+            alt=""
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/avneesh-agarwal-78312b20a/"
+          target="_blank"
+        >
+          <img
+            className="h-14 w-14 hover:bg-blue-900 rounded-full cursor-pointer transform-gpu"
+            src="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620292929/1fdbd88fec469fc342cdff7ea25b8bd8-removebg-preview_vctiar.png"
+            alt=""
+          />
+        </a>
+      </div>
     </div>
   );
 }

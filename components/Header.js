@@ -26,16 +26,16 @@ function Header() {
   useEffect(() => {
     console.log(time);
     {
-      time > 4 && time < 12 ? setTimeframe("Morning") : <></>;
+      time >= 4 && time < 12 ? setTimeframe("Morning") : <></>;
     }
     {
-      time > 13 && time < 16 ? setTimeframe("Afternoon") : <></>;
+      time >= 13 && time < 16 ? setTimeframe("Afternoon") : <></>;
     }
     {
-      time > 17 && time < 20 ? setTimeframe("Evening") : <></>;
+      time >= 17 && time < 21 ? setTimeframe("Evening") : <></>;
     }
     {
-      time > 20 && time < 25 ? setTimeframe("Night") : <></>;
+      time >= 20 && time < 25 ? setTimeframe("Night") : <></>;
     }
   }, []);
 
