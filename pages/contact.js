@@ -28,7 +28,7 @@ export default function ContactUs() {
   }
 
   return (
-    <div className="bg-[#023047] justify-between flex flex-col min-h-screen min-w-screen md:flex-row md:pt-20">
+    <div className="bg-[#023047] justify-between flex flex-col min-h-screen min-w-[100vw] md:flex-row md:pt-20">
       <Head>
         <title>Contact us</title>
         <link
@@ -37,7 +37,9 @@ export default function ContactUs() {
         />
       </Head>
       <div className="pl-1 md:pt-20 md:pl-20 w-[450px] pr-5 md:flex flex-col">
-        <h2 className="mt-10 text-4xl font-bold text-gray-100 md:mt-0">Help us improve</h2>
+        <h2 className="mt-10 text-4xl font-bold text-gray-100 md:mt-0">
+          Help us improve
+        </h2>
         <p className="text-gray-200 pt-5">
           Fill up the form and I will get back to you
         </p>
