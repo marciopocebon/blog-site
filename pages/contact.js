@@ -36,7 +36,7 @@ export default function ContactUs() {
           href="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620273120/image-removebg-preview_6_obe3fv.png"
         />
       </Head>
-      <div className="pl-1 md:pt-20 md:pl-20 w-[450px] pr-5 md:flex flex-col">
+      <div className="pl-1 md:pt-20 md:pl-20 w-[450px] pr-5 md:flex flex-col md:ml-0 ml-10">
         <h2 className="mt-10 text-4xl font-bold text-gray-100 md:mt-0">
           Help us improve
         </h2>
