@@ -50,7 +50,7 @@ export default function ContactUs() {
           <p className="text-gray-200 text-l">avneeshagarwal0612@gmail.com</p>
         </div>
 
-        <div className="hidden ring-blue-700 hover:ring-2 rounded-lg cursor-pointer focus:outline-none p-3 pr-1 transform-gpu mt- md:flex">
+        <div className="hidden ring-blue-700 hover:ring-2 rounded-lg cursor-pointer focus:outline-none p-3 pr-1 transform-gpu mt-4 md:flex">
           <img
             src="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620391308/154-1541366_transparent-edit-icon-png-location-white-icon-png-removebg-preview_1_ewvzdm.png"
             alt=""
