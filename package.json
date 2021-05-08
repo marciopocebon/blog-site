@@ -12,6 +12,7 @@
     "@material-ui/icons": "^4.11.2",
     "axios": "^0.21.1",
     "css-loader": "^5.2.4",
+    "dotenv": "^9.0.0",
     "emailjs-com": "^2.6.4",
     "firebase": "^8.4.2",
     "next": "10.1.3",

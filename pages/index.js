@@ -4,7 +4,6 @@ import Blog from "../components/Blog";
 
 export default function Home({ results }) {
   console.log(results);
-  const URL = "proce";
 
   return (
     <div className="pt-10 sm:pt-11 pl-12">
@@ -22,7 +21,7 @@ export default function Home({ results }) {
 }
 
 export async function getServerSideProps(context) {
-  const request = await fetch("https://blog-site-backend-avneesh.herokuapp.com/blog/").then((res) => res.json());
+  const request = await fetch(process.env.apiKey).then((res) => res.json());
 
   return {
     props: {

@@ -1,19 +1,18 @@
 import emailjs from "emailjs-com";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import React from "react";
 
 export default function ContactUs() {
   const router = useRouter();
+
   function sendEmail(e) {
     e.preventDefault();
-
     emailjs
       .sendForm(
-        "gmail",
-        "template_yjaky9d",
+        process.env.mailId,
+        process.env.templateId,
         e.target,
-        "user_7ZQgzGca2oteS5RRColwT"
+        process.env.userId
       )
       .then(
         (result) => {
