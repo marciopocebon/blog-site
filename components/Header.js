@@ -44,8 +44,9 @@ function Header() {
         <img
           width={200}
           src="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620271877/logo_rncuha.png"
-          alt=""
-          className="sm:flex hidden"
+          alt="logo"
+          className="sm:flex hidden cursor-pointer"
+          onClick={router.push("/")}
         />
         <img
           width={70}
@@ -56,7 +57,7 @@ function Header() {
         <p className="font-extrabold pt-1 text-xl pl-2">Good {timeframe}</p>
       </div>
 
-      <div className="flex mr-10 items-center">
+      <div className="flex mr-10 items-center justify-evenly">
         <p
           className="text-gray-700 text-md cursor-pointer hover:text-black"
           onClick={() => router.push("/write")}
@@ -64,7 +65,7 @@ function Header() {
           Write a Story
         </p>
         <p
-          className="text-gray-700 text-md cursor-pointer hover:text-black"
+          className="text-gray-700 text-md cursor-pointer ml-2 hover:text-black"
           onClick={() => router.push("/contact")}
         >
           Contact us
@@ -75,7 +76,7 @@ function Header() {
           onClick={handleClick}
           className="rounded-full w-9 cursor-pointer ml-2 sm:mr-1 sm:ml-4"
           src={user?.photoURL}
-          alt=""
+          alt={user.displayName}
         />
         <div className="mt-10">
           <Menu
