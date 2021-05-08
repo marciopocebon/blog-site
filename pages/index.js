@@ -4,6 +4,8 @@ import Blog from "../components/Blog";
 
 export default function Home({ results }) {
   console.log(results);
+  const URL = "proce";
+
   return (
     <div className="pt-10 sm:pt-11 pl-12">
       <Head>

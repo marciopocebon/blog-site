@@ -1,11 +1,14 @@
 import React from "react";
+import { useRouter } from "next/router";
 
 export default function Blog({ results }) {
+  const router = useRouter();
+
   return (
     <div className="mt-10">
       {results.map((result) => (
         <div
-          onClick={router.push(`${result.id}`)}
+          onClick={() => router.push(`${result._id}`)}
           className="flex flex-col cursor-pointer"
         >
           <div className="flex">
