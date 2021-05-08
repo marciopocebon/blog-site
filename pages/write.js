@@ -1,10 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
-import Fade from "@material-ui/core/Fade";
 import Head from "next/head";
 import axios from "axios";
 
@@ -63,139 +60,32 @@ function Write() {
           className="m-5"
         />
 
-        <div className="flex items-center mr-4 lg:mr-80">
+        <div className="flex mr-10 items-center justify-between">
           <button
             className="text-[15px] rounded-full bg-[#1a8917] text-white p-3 pt-1 pb-1 mr-7 font-semibold focus-within:outline-none sm:inline-flex  hover:bg-[#0F730C]"
             onClick={handelSubmit}
           >
             Publish
           </button>
-
-          {/* More */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 mr-2"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+          <p
+            className="text-gray-700 text-md cursor-pointer hover:text-black"
+            onClick={() => router.push("/")}
           >
-            <path
-              className="stroke-current text-gray-500"
-              stroke-linecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
-            />
-          </svg>
+            Home
+          </p>
 
-          {/* Notification */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-10 mr-2"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+          <p
+            className="text-gray-700 text-md cursor-pointer hover:text-black "
+            onClick={() => router.push("/write")}
           >
-            <path
-              className="stroke-current text-gray-500"
-              stroke-linecap="round"
-              strokeLinejoin="round"
-              strokeWidth="1.4"
-              d="M15 17h5l-1.255-1.255A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-            />
-          </svg>
-
-          <img
-            aria-controls="fade-menu"
-            aria-haspopup="true"
-            onClick={handleClick}
-            className="rounded-full w-9 cursor-pointer"
-            src={user?.photoURL}
-            alt=""
-          />
-          <div>
-            <Menu
-              id="fade-menu"
-              anchorEl={anchorEl}
-              keepMounted
-              open={open}
-              onClose={handleClose}
-              TransitionComponent={Fade}
-            >
-              <MenuItem
-                onClick={handleClose}
-                style={{
-                  borderBottom: "1px solid gray",
-                  backgroundColor: "white",
-                }}
-              >
-                <div className="flex items-center justify-center pb-10 pt-2">
-                  <img
-                    src={user.photoURL}
-                    alt=""
-                    className="rounded-full w-9 m-1 mr-2 cursor-pointer"
-                  />
-                  {user.displayName}
-                </div>
-              </MenuItem>
-              <MenuItem
-                onClick={handleClose}
-                style={{
-                  backgroundColor: "white",
-                }}
-              >
-                <p
-                  className="text-gray-600 text-md pt-4 hover:text-black"
-                  onClick={() => router.push("/write")}
-                >
-                  Write a Story
-                </p>
-              </MenuItem>
-              <MenuItem
-                onClick={handleClose}
-                style={{
-                  backgroundColor: "white",
-                }}
-              >
-                <p className="text-gray-600 text-md pt-2  hover:text-black">
-                  Stories
-                </p>
-              </MenuItem>
-              <MenuItem
-                onClick={handleClose}
-                style={{
-                  backgroundColor: "white",
-                }}
-              >
-                <p
-                  className="text-gray-600 text-md pt-2  hover:text-black"
-                  onClick={() => auth.signOut()}
-                >
-                  Sign Out
-                </p>
-              </MenuItem>
-              <MenuItem
-                onClick={handleClose}
-                style={{
-                  backgroundColor: "white",
-                }}
-              >
-                <p className="text-gray-600 text-md pt-2  hover:text-black">
-                  Design Your Profile
-                </p>
-              </MenuItem>
-              <MenuItem
-                onClick={handleClose}
-                style={{
-                  backgroundColor: "white",
-                }}
-              >
-                <p className="text-gray-600 text-md pt-2  hover:text-black">
-                  Settings
-                </p>
-              </MenuItem>
-            </Menu>
-          </div>
+            Write a Story
+          </p>
+          <p
+            className="text-gray-700 text-md cursor-pointer ml-2 hover:text-black"
+            onClick={() => router.push("/contact")}
+          >
+            Contact us
+          </p>
         </div>
       </div>
       <div className="flex pr-2 pt-14 pl-7 xl:pl-[250px] 2xl:pl-[450px]">
