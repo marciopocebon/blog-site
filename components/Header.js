@@ -24,7 +24,6 @@ function Header() {
   };
 
   useEffect(() => {
-    console.log(time);
     {
       time >= 4 && time < 12 ? setTimeframe("Morning") : <></>;
     }

@@ -10,10 +10,10 @@ export default function ContactUs() {
 
     emailjs
       .sendForm(
-        "gmail",
-        "template_yjaky9d",
+        process.env.mailJSID,
+        process.env.templateID,
         e.target,
-        "user_7ZQgzGca2oteS5RRColwT"
+        process.env.emailJSuserID
       )
       .then(
         (result) => {

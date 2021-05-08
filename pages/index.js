@@ -2,7 +2,8 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Blog from "../components/Blog";
 
-export default function Home() {
+export default function Home({ results }) {
+  console.log(results);
   return (
     <div className="pt-10 sm:pt-11 pl-12">
       <Head>
@@ -13,7 +14,17 @@ export default function Home() {
         />
       </Head>
       <Header />
-      <Blog />
+      <Blog results={results} />
     </div>
   );
+}
+
+export async function getServerSideProps(context) {
+  const request = await fetch(process.env.API_KEY).then((res) => res.json());
+
+  return {
+    props: {
+      results: request,
+    },
+  };
 }
