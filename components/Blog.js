@@ -4,7 +4,10 @@ export default function Blog({ results }) {
   return (
     <div className="mt-10">
       {results.map((result) => (
-        <div className="flex flex-col">
+        <div
+          onClick={router.push(`${result.id}`)}
+          className="flex flex-col cursor-pointer"
+        >
           <div className="flex">
             <img
               src={result.userImageURL}

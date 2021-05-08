@@ -4,7 +4,6 @@ import { auth } from "../firebase";
 
 function Header() {
   const [user] = useAuthState(auth);
-
   const router = useRouter();
 
   return (
@@ -15,7 +14,7 @@ function Header() {
           src="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620271877/logo_rncuha.png"
           alt="logo"
           className="sm:flex hidden cursor-pointer"
-          onClick={router.push("/")}
+          onClick={() => router.push("/")}
         />
         <img
           width={70}
@@ -27,7 +26,7 @@ function Header() {
 
       <div className="flex mr-10 items-center justify-between">
         <p
-          className="text-gray-700 text-md cursor-pointer hover:text-black"
+          className="text-gray-700 text-md cursor-pointer mr-2 hover:text-black"
           onClick={() => router.push("/")}
         >
           Home

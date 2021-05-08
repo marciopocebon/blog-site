@@ -4,6 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase";
 import Head from "next/head";
 import axios from "axios";
+import Header from "../components/Header";
 
 function Write() {
   const [user] = useAuthState(auth);
@@ -53,39 +54,14 @@ function Write() {
         />
       </Head>
       <div className="pt-5 justify-between flex">
-        <img
-          width={70}
-          src="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620273120/image-removebg-preview_6_obe3fv.png"
-          alt=""
-          className="m-5"
-        />
-
         <div className="flex mr-10 items-center justify-between">
+          <Header />
           <button
             className="text-[15px] rounded-full bg-[#1a8917] text-white p-3 pt-1 pb-1 mr-7 font-semibold focus-within:outline-none sm:inline-flex  hover:bg-[#0F730C]"
             onClick={handelSubmit}
           >
             Publish
           </button>
-          <p
-            className="text-gray-700 text-md cursor-pointer hover:text-black"
-            onClick={() => router.push("/")}
-          >
-            Home
-          </p>
-
-          <p
-            className="text-gray-700 text-md cursor-pointer hover:text-black "
-            onClick={() => router.push("/write")}
-          >
-            Write a Story
-          </p>
-          <p
-            className="text-gray-700 text-md cursor-pointer ml-2 hover:text-black"
-            onClick={() => router.push("/contact")}
-          >
-            Contact us
-          </p>
         </div>
       </div>
       <div className="flex pr-2 pt-14 pl-7 xl:pl-[250px] 2xl:pl-[450px]">
