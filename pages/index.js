@@ -21,7 +21,9 @@ export default function Home({ results }) {
 }
 
 export async function getServerSideProps(context) {
-  const request = await fetch("https://blog-site-backend-avneesh.herokuapp.com/blog/").then((res) => res.json());
+  const request = await fetch(
+    "https://blog-site-backend-avneesh.herokuapp.com/blog/"
+  ).then((res) => res.json());
 
   return {
     props: {

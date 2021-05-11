@@ -1,3 +1,4 @@
+import { Avatar } from "@material-ui/core";
 import { useRouter } from "next/router";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase";
@@ -43,9 +44,23 @@ function Header() {
         >
           Contact us
         </p>
+        {user.photoURL ? (
+          <img
+            className="rounded-full h-10 ml-2 cursor-pointer"
+            src={user.photoURL}
+            alt={user.displayName}
+            onClick={() => auth.signOut()}
+          />
+        ) : (
+          <>
+            <Avatar onClick={() => auth.signOut()} />
+            <p>{user.displayName}</p>
+          </>
+        )}
       </div>
     </div>
   );
 }
 
 export default Header;
+

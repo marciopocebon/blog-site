@@ -10,7 +10,7 @@ function login() {
   return (
     <>
       <Head>
-        <title>LogIn</title>
+        <title>Login</title>
         <link
           rel="icon"
           href="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620273120/image-removebg-preview_6_obe3fv.png"

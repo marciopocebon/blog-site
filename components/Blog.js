@@ -4,13 +4,12 @@ import { useRouter } from "next/router";
 export default function Blog({ results }) {
   const router = useRouter();
 
-
   return (
-    <div className="mt-10">
+    <div className="pt-10">
       {results.map((result) => (
         <div
           onClick={() => router.push(`${result._id}`)}
-          className="flex flex-col cursor-pointer"
+          className="flex flex-col cursor-pointer pt-10"
         >
           <div className="flex">
             <img
