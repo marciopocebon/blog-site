@@ -1,8 +1,7 @@
 import { useRouter } from "next/router";
 import React from "react";
-import Header from "../components/Header";
 
-function custom404() {
+function Custom404() {
   const router = useRouter();
   return (
     <div
@@ -12,14 +11,12 @@ function custom404() {
       }}
       className="flex flex-col items-center justify-items-center bg-cover h-[100vh]"
     >
-      <div style={{ mixBlendMode: "light" }} className="base">
-        <div className="hole text-5xl">
-          <p className="text-gray-300"> This page could not be found</p>
-        </div>
-        <button onClick={() => router.push("/")}>Go back</button>
+      <div className="text-5xl">
+        <p className="text-gray-300"> This page could not be found</p>
       </div>
+      <button onClick={() => router.push("/")}>Go back</button>
     </div>
   );
 }
 
-export default custom404;
+export default Custom404;

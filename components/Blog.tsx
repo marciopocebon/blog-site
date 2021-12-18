@@ -1,13 +1,18 @@
 import React from "react";
 import { useRouter } from "next/router";
 
-export default function Blog({ results }) {
+interface Props {
+  results: any;
+}
+
+const Blog: React.FC<Props> = ({ results }) => {
   const router = useRouter();
 
   return (
     <div className="pt-10">
-      {results.map((result) => (
+      {results.map((result: any) => (
         <div
+          key={result._id}
           onClick={() => router.push(`${result._id}`)}
           className="flex flex-col cursor-pointer pt-10"
         >
@@ -25,4 +30,6 @@ export default function Blog({ results }) {
       ))}
     </div>
   );
-}
+};
+
+export default Blog;

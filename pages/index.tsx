@@ -1,12 +1,10 @@
+import { GetServerSideProps } from "next";
 import Head from "next/head";
-import Header from "../components/Header";
-import Blog from "../components/Blog";
+import Sidebar from "../components/Sidebar";
 
-export default function Home({ results }) {
-  console.log(results);
-
+const Home: React.FC<any> = ({ results }) => {
   return (
-    <div className="pt-10 sm:pt-11 pl-12">
+    <div className="w-screen h-screen flex">
       <Head>
         <title>BlogPedia</title>
         <link
@@ -14,13 +12,14 @@ export default function Home({ results }) {
           href="https://res.cloudinary.com/dssvrf9oz/image/upload/v1620273120/image-removebg-preview_6_obe3fv.png"
         />
       </Head>
-      <Header />
-      <Blog results={results} />
+      <Sidebar />
     </div>
   );
-}
+};
 
-export async function getServerSideProps(context) {
+export default Home;
+
+export const getServerSideProps: GetServerSideProps = async () => {
   const request = await fetch(
     "https://blog-site-backend-avneesh.herokuapp.com/blog/"
   ).then((res) => res.json());
@@ -30,4 +29,4 @@ export async function getServerSideProps(context) {
       results: request,
     },
   };
-}
+};

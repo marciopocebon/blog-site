@@ -1,38 +1,21 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../firebase";
 import Head from "next/head";
 import axios from "axios";
 import Header from "../components/Header";
 
 function Write() {
-  const [user] = useAuthState(auth);
   const baseURL = "https://blog-site-backend-avneesh.herokuapp.com/blog/";
   const router = useRouter();
   const [title, setTitle] = useState("");
   const [story, setStory] = useState("");
 
-  const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
-  const handelSubmit = (e) => {
+  const handelSubmit = (e: any) => {
     e.preventDefault();
     axios
       .post(baseURL, {
         title: title,
         story: story,
-        name: user.displayName,
-        email: user.email,
-        userImageURL: user.photoURL,
       })
       .then(function (response) {
         console.log(response);
